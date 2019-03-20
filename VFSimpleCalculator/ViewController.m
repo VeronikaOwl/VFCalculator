@@ -19,5 +19,22 @@
   // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)clickButton:(UIButton *)sender
+{
+  
+}
+
+- (IBAction)clickSign:(UIButton *)sender
+{
+}
+
+- (IBAction)clickEquals:(UIButton *)sender
+{
+}
+
+- (IBAction)clickClear:(UIButton *)sender
+{
+}
+
 
 @end
