@@ -13,6 +13,7 @@
 		F657A04D224119800085BFD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F657A04C224119800085BFD4 /* Assets.xcassets */; };
 		F657A050224119800085BFD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F657A04E224119800085BFD4 /* LaunchScreen.storyboard */; };
 		F657A053224119800085BFD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F657A052224119800085BFD4 /* main.m */; };
+		F657A05C224226530085BFD4 /* VFCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = F657A05B224226530085BFD4 /* VFCalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		F657A04F224119800085BFD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F657A051224119800085BFD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F657A052224119800085BFD4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F657A05A224226530085BFD4 /* VFCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VFCalculator.h; sourceTree = "<group>"; };
+		F657A05B224226530085BFD4 /* VFCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VFCalculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		F657A0422241196E0085BFD4 /* VFSimpleCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				F657A059224226300085BFD4 /* VFCalculator */,
 				F657A0432241196E0085BFD4 /* AppDelegate.h */,
 				F657A0442241196E0085BFD4 /* AppDelegate.m */,
 				F657A0462241196E0085BFD4 /* ViewController.h */,
@@ -69,6 +73,15 @@
 				F657A052224119800085BFD4 /* main.m */,
 			);
 			path = VFSimpleCalculator;
+			sourceTree = "<group>";
+		};
+		F657A059224226300085BFD4 /* VFCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				F657A05A224226530085BFD4 /* VFCalculator.h */,
+				F657A05B224226530085BFD4 /* VFCalculator.m */,
+			);
+			path = VFCalculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +157,7 @@
 				F657A0482241196E0085BFD4 /* ViewController.m in Sources */,
 				F657A053224119800085BFD4 /* main.m in Sources */,
 				F657A0452241196E0085BFD4 /* AppDelegate.m in Sources */,
+				F657A05C224226530085BFD4 /* VFCalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

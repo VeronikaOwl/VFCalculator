@@ -7,34 +7,152 @@
 //
 
 #import "ViewController.h"
+#import "VFCalculator.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+{
+  char op;
+  NSInteger currentNumber;
+  BOOL firstOperand;
+  VFCalculator *myCalculator;
+  NSMutableString *displayString;
+  NSMutableString *currentNumberDisplayString;
+}
 
-- (void)viewDidLoad {
+@synthesize calculateDisplay, currentNumberDisplay;
+
+- (void)viewDidLoad
+{
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (IBAction)clickButton:(UIButton *)sender
-{
   
+  firstOperand = YES;
+  displayString = [NSMutableString stringWithCapacity: 40];
+  myCalculator = [[VFCalculator alloc] init];
 }
 
-- (IBAction)clickSign:(UIButton *)sender
+- (void) processDigit: (NSInteger) digit
 {
+  currentNumber = currentNumber * 10 + digit;
+  
+  [displayString appendString:
+   [NSString stringWithFormat: @"%li", digit]];
+  calculateDisplay.text = displayString;
+  
+  [currentNumberDisplayString appendString:
+   [NSString stringWithFormat: @"%li", digit]];
+  currentNumberDisplay.text = currentNumberDisplayString;
 }
 
-- (IBAction)clickEquals:(UIButton *)sender
+- (void) processOp: (char) theOp
 {
+  NSString *opStr;
+  
+  op = theOp;
+  
+  switch (theOp)
+  {
+    case '+':
+      opStr = @"+";
+      break;
+    case '-':
+      opStr = @"-";
+      break;
+    case '*':
+      opStr = @"x";
+      break;
+    case '/':
+      opStr = @":";
+      break;
+  }
+  
+  //[self storePart];
+  firstOperand = NO;
+  
+  [displayString appendString: opStr];
+  calculateDisplay.text = displayString;
 }
 
-- (IBAction)clickClear:(UIButton *)sender
+- (void) storePart
 {
+  if (firstOperand)
+  {
+    myCalculator = currentNumber;
+  }
+  else
+  {
+    myCalculator = currentNumber;
+    firstOperand = YES;
+  }
+  
+  currentNumber = 0;
 }
 
+
+#pragma mark - clickMethods
+
+- (IBAction)clickDigit:(UIButton *)sender
+{
+  NSInteger digit = sender.tag;
+  
+  [self processDigit: digit];
+}
+
+- (IBAction)clickPlus
+{
+  [self processOp: '+'];
+}
+
+- (IBAction)clickMinus
+{
+  [self processOp: '-'];
+}
+
+- (IBAction)clickMultiply
+{
+  [self processOp: 'x'];
+}
+
+- (IBAction)clickDivide
+{
+  [self processOp: ':'];
+}
+
+- (IBAction)clickClear
+{
+  firstOperand = YES;
+  currentNumber = 0;
+  [myCalculator clear];
+  
+  [displayString setString: @""];
+  calculateDisplay.text = displayString;
+  currentNumberDisplay.text = displayString;
+}
+
+- (IBAction)clickEquals
+{
+  if (firstOperand == NO)
+  {
+    [self storePart];
+    [myCalculator performOperator: op];
+     
+    [displayString appendString: @"="];
+    [displayString appendString: myCalculator.accumulator];
+    
+    calculateDisplay.text = displayString;
+    
+    [displayString setString: @""];
+    currentNumberDisplay.text = displayString;
+    
+    currentNumber = 0;
+    firstOperand = YES;
+    [displayString setString: @""];
+    
+  }
+}
 
 @end
