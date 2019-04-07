@@ -10,23 +10,19 @@
 
 @interface ViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UILabel *calculateDisplay;
-@property (strong, nonatomic) IBOutlet UILabel *currentNumberDisplay;
+  @property (strong, nonatomic) IBOutlet UILabel *displayLabel;
+  @property (strong, nonatomic) IBOutlet UILabel *displayLabelCurrent;
 
-- (void) processDigit: (NSInteger) digit;
-- (void) processOp: (char) theOp;
-- (void) storePart;
-//Implicit conversion of 'NSInteger' (aka 'long') to 'VFCalculator * _Nonnull' is disallowed with ARC
 
-- (IBAction)clickDigit:(UIButton *)sender;
+- (IBAction)equalButtonClicked;
+- (IBAction)clearButtonClicked:(id)sender;
 
-- (IBAction)clickPlus;
-- (IBAction)clickMinus;
-- (IBAction)clickMultiply;
-- (IBAction)clickDivide;
+- (IBAction)num:(id)sender;
 
-- (IBAction)clickClear;
-- (IBAction)clickEquals;
+- (IBAction)addButtonClicked;
+- (IBAction)subtractButtonClicked;
+- (IBAction)multiplyButtonClicked;
+- (IBAction)divideButtonClicked;
 
 @end
 
