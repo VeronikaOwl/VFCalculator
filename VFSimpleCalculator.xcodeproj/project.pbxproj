@@ -14,6 +14,7 @@
 		F657A050224119800085BFD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F657A04E224119800085BFD4 /* LaunchScreen.storyboard */; };
 		F657A053224119800085BFD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F657A052224119800085BFD4 /* main.m */; };
 		F657A05C224226530085BFD4 /* VFCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = F657A05B224226530085BFD4 /* VFCalculator.m */; };
+		F657A05E224E1DC80085BFD4 /* 14977.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F657A05D224E1DBF0085BFD4 /* 14977.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		F657A052224119800085BFD4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F657A05A224226530085BFD4 /* VFCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VFCalculator.h; sourceTree = "<group>"; };
 		F657A05B224226530085BFD4 /* VFCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VFCalculator.m; sourceTree = "<group>"; };
+		F657A05D224E1DBF0085BFD4 /* 14977.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14977.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				F657A059224226300085BFD4 /* VFCalculator */,
 				F657A0432241196E0085BFD4 /* AppDelegate.h */,
 				F657A0442241196E0085BFD4 /* AppDelegate.m */,
+				F657A05D224E1DBF0085BFD4 /* 14977.jpg */,
 				F657A0462241196E0085BFD4 /* ViewController.h */,
 				F657A0472241196E0085BFD4 /* ViewController.m */,
 				F657A0492241196F0085BFD4 /* Main.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F657A05E224E1DC80085BFD4 /* 14977.jpg in Resources */,
 				F657A050224119800085BFD4 /* LaunchScreen.storyboard in Resources */,
 				F657A04D224119800085BFD4 /* Assets.xcassets in Resources */,
 				F657A04B2241196F0085BFD4 /* Main.storyboard in Resources */,
